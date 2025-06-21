@@ -1,0 +1,52 @@
+.h1a{
+            margin-top: 10px;
+            color: #4e6799;
+            font-family: Galindo;
+            text-align: center;
+            font-size: 35px;
+            
+        }
+        .box{
+                margin: 10px;
+                border-radius: 10px;
+                height: 260px;
+                width: 200px;
+                background-color: #4e6799;
+                box-shadow: 4px 4px 5px rgba(63, 62, 62, 0.75);
+                display: wrap;
+                align-items: center;
+                justify-content: center;
+        }
+        .box2{
+            margin-left: 7%;
+        }
+        .box2 img{
+            max-width: 170px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .box2 img{
+            transition: transform 0.3s ease-in-out;
+        }
+        .box2 img:hover{
+            transform: scale(0.9);
+        }
+        .box-teks{
+           margin-top: 10px;
+           margin-left: 20px;
+           margin-right: 20px;
+           cursor: pointer;
+           position: relative;
+           text-align: center;
+        }
+        .box-teks a{
+            text-decoration: none;
+            color: #f0edee;
+            font-family: arial;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .box-teks a:hover{
+            color: black;
+        }
