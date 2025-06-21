@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="icon1.png">
+        <title>Zenless Zone Zero</title>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Galindo&display=swap" rel="stylesheet">
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{ 
+                background-color: #f0edee;
+                height: 100vh; 
+                padding: 10px;
+                
+            }
+            header{
+                font-size: 25px;
+                width: 100%;
+                height: 170px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+            article{
+                margin-top: 10px;
+                height: 100px;
+                width: 100%;
+                justify-items: center;
+            }
+            footer{
+                background-color: #f0edee;
+                width: 500px;
+            }
+            h2{
+                color: white;
+                margin: 10px;
+                text-align: center;
+                font-family: Audiowide;
+            }
+            .gambar{
+                width: 150px;
+                border-radius: 10px;
+                box-shadow: 2px 2px 5px rgba(79, 77, 77, 0.592);
+            }
+            .kotak-besar{
+                margin-top: 10px;
+                height: 400;
+                width: 300;
+                background-color: #4e6799;
+                border-radius: 15px;
+                padding: 15px;
+            }
+            .kotak-kecil{
+                background-color: white;
+                padding: 10px;
+                margin: 10px;
+                border-radius: 10px;
+                cursor: pointer;
+                text-align: center;
+                width: 120px;
+                height: 90px;
+            }
+            .kotak-kecil-bayar{
+                background-color: white;
+                padding: 10px;
+                margin: 15px;
+                border-radius: 10px;
+                cursor: pointer;
+                text-align: center;
+                width: 110px;
+                height: 80px;
+            }
+            .kotak-kecil-bayar p{
+                font-family: arial;
+                font-size: 12px;
+                font-weight: bold;
+                margin: 3px;
+            }
+            .kotak-kecil p{
+                color: black;
+                font-weight: bold;
+                font-family: arial;
+                font-size: 14px;
+                margin-bottom: 5px;
+                margin-top: 3px;
+            }
+            .kotak-kecil img{
+                width: 35px;
+            }
+            .button{
+                margin-top: 10px;
+                width: auto;
+                height: 40px;
+                border-radius: 10px;
+                background-color: #4e6799;
+                color: white;
+                cursor: pointer;
+            }
+            .button :hover{
+                color: black;
+            } 
+            .button p{
+                font-family: Audiowide;
+                font-size: 14px;
+                margin: 8px;
+            }
+            .input{
+               text-align: center;
+               border-radius: 5px;
+               height: 30px;
+               width: 100%;
+               outline: none;
+            }
+            #loading {
+                position: fixed;          /* menempel di seluruh layar */
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(255,255,255,0.8);
+                display: none;            /* disembunyikan awalnya */
+                align-items: center;      /* pusat vertikal */
+                justify-content: center;  /* pusat horizontal */
+                z-index: 9999;            /* di atas elemen lain */
+                flex-direction: column;
+                gap: .5rem;
+                font-family: sans-serif;
+                font-weight: bold;
+                color: #555;
+            }
+            .loading-gif {
+                width: 200px;  
+            }
+
+        </style>
+
+
+</head>
+<body>
+    <header>
+        <div>
+            <img src="zzz.jpg" class="gambar">
+        </div>
+    </header>
+    
+    <article>
+       
+        <div class="kotak-besar">
+            <h2>Pilih Nominal Top Up</h2>
+            <table>
+                <tr>
+                    <td> 
+                        <div class="kotak-kecil">
+                            <img src="monochrome.png" alt="monochrome">
+                            <p>60 monochrome</p>              
+                            <input type="radio" id="option1" name="pilih" value="25">
+                        </div>
+                    </td>
+                    <td> 
+                        <div class="kotak-kecil">
+                            <img src="monochrome.png" alt="monochrome">
+                            <p style="margin-bottom: 5px">100 monochrome</p>
+                            <input type="radio" id="option1" name="pilih" value="50">
+                        </div>
+                    </td>
+                    <td> 
+                        <div class="kotak-kecil">
+                            <img src="monochrome.png" alt="monochrome">
+                            <p style="margin-bottom: 5px">150 monochrome</p>
+                            <input type="radio" id="option1" name="pilih" value="100">
+                        </div>
+                    </td>
+                    <td> 
+                        <div class="kotak-kecil">
+                            <img src="monochrome.png" alt="monochrome">
+                            <p style="margin-bottom: 5px">200 monochrome</p>
+                            <input type="radio" id="option1" name="pilih" value="150">
+                        </div>
+                    </td>
+                    <td> 
+                        <div class="kotak-kecil">
+                            <img src="monochrome.png" alt="monochrome">
+                            <p style="margin-bottom: 5px">300 monochrome</p>
+                            <input type="radio" id="option1" name="pilih" value="200">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        <div class="kotak-kecil">
+                            <img src="monochrome.png" alt="monochrome">
+                            <p style="margin-bottom: 5px">400 monochrome</p>
+                            <input type="radio" id="option1" name="pilih" value="300">
+                        </div>
+                    </td>
+                    <td> 
+                        <div class="kotak-kecil">
+                            <img src="monochrome.png" alt="monochrome">
+                            <p style="margin-bottom: 5px">500 monochrome</p>
+                            <input type="radio" id="option1" name="pilih" value="500">
+                        </div>
+                    </td>
+                    <td> 
+                        <div class="kotak-kecil">
+                            <img src="monochrome.png" alt="monochrome">
+                            <p style="margin-bottom: 5px">1000 monochrome</p>
+                            <input type="radio" id="option1" name="pilih" value="1000">
+                        </div>
+                    </td>
+                    <td> 
+                        <div class="kotak-kecil">
+                            <img src="monochrome.png" alt="monochrome">
+                            <p style="margin-bottom: 5px">1300 monochrome</p>
+                            <input type="radio" id="option1" name="pilih" value="1300">
+                        </div>
+                    </td>
+                    <td> 
+                        <div class="kotak-kecil">
+                            <img src="monochrome.png" alt="monochrome">
+                            <p style="margin-bottom: 5px">3000 monochrome</p>
+                            <input type="radio" id="option1" name="pilih" value="3000">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="kotak-besar" style="padding-top: 2px;">
+            <h2>Pilih Metode Pembayaran</h2>
+            <table>
+                <tr> 
+                    <td>
+                        <div class="kotak-kecil-bayar">
+                            <img src="Gopay.jpg" alt="Gopay">
+                            <p style="margin-bottom: 5px">GoPay</p>
+                            <input type="radio" name="bayar">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="kotak-kecil-bayar">
+                            <img src="OVO.jpg" alt="ovo">
+                            <p style="margin-bottom: 5px">OVO</p>
+                            <input type="radio" name="bayar">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="kotak-kecil-bayar">
+                            <img src="Dana.jpg" alt="dana">
+                            <p style="margin-bottom: 5px">Dana</p>
+                            <input type="radio" name="bayar">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="kotak-kecil-bayar">
+                            <img src="shopeepay.jpg" alt="shopee">
+                            <p style="margin-bottom: 5px">ShopeePay</p>
+                            <input type="radio" name="bayar">
+                        </div>
+                    </td>
+                     <td>
+                        <div class="kotak-kecil-bayar">
+                            <img src="bank.jpg" alt="bank">
+                            <p style="margin-bottom: 5px">Bank Transfer</p>
+                            <input type="radio" name="bayar">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="kotak-besar">
+            <h2>Masukan Email</h2>
+            <input type="email" placeholder="Email" class="input">
+            <button onclick="startLoading()" class="button">
+                <p>Konfirmasi</p></button>
+                
+            <div id="loading">
+                <div><img src="shuriken2.gif" alt="loading" class="loading-gif"></div>
+            </div>
+
+            
+        </div>
+    </article>
+
+<script>
+    function startLoading() {
+      // Tampilkan elemen loading
+      document.getElementById('loading').style.display = 'flex';
+
+      // Nonaktifkan tombol agar tidak diklik berkali-kali
+      document.querySelector("button").disabled = true;
+
+      // Tunggu 2 detik, lalu alihkan ke halaman lain
+      setTimeout(() => {
+        window.location.href = "thank-you.html"; // Ganti dengan URL tujuan
+      }, 3000); // 2000 ms = 2 detik
+    }
+</script>
+
+</body>
+</html> 
